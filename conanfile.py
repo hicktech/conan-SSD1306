@@ -17,3 +17,6 @@ class ParticlePackage(ConanFile):
     def source(self):
         self.run(f'git clone {self.repo_url} .')
         self.run(f'git checkout {self.version}')
+
+    def package_info(self):
+        self.cpp_info.srcdirs = ['src']

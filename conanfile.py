@@ -2,13 +2,13 @@ from conans import ConanFile
 
 
 class ParticlePackage(ConanFile):
-    name = 'ssd1306'
+    name = 'SSD1306'
     version = '2.4.1'
-    url = 'https://github.com/hicktech/conan-ssd1306'
+    url = 'https://github.com/hicktech/conan-SSD1306'
     repo_url = 'https://github.com/adafruit/Adafruit_SSD1306.git'
     generators = 'cmake'
     settings = []
-    requires = []
+    requires = ['AdafruitGFX/1.10.3@hicktech/stable']
 
     def package(self):
         self.copy('*.c*', dst='src')
